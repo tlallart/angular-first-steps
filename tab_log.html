@@ -7,7 +7,7 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="log in logCtrl.logs | orderBy : '-timestamp'">
-				<td>{{log.timestamp | date : 'yyyy-MM-dd HH:mm:ss'}}</td><td>{{log.username}}</td><td>{{log.msg}}</td>
+				<td class="col-xs-3">{{log.timestamp | date : 'yyyy-MM-dd HH:mm:ss'}}</td><td class="col-xs-3">{{log.username}}</td><td class="col-xs-6">{{log.msg}}</td>
 			</tr>
 		</tbody>
 	</table>

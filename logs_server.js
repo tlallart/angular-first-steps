@@ -3,9 +3,9 @@ var fs = require('fs');
 var url = require('url');
 var sqlite3 = require('sqlite3').verbose();
 
-var db = new sqlite3.Database('logs2.db');
+var db = new sqlite3.Database('logs.db');
 
-if (!fs.existsSync('logs2.db'))
+if (!fs.existsSync('logs.db'))
 {
 	db.run('create table logs(timestamp datetime primary key, username text, msg text)');
 };

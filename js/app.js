@@ -41,11 +41,11 @@
 		};
 	}]);
 	
-	app.directive('addTab', ['$http', '$log', '$sanitize', function($http, $log, $sanitize) {
+	app.directive('addTab', ['$http', '$log', function($http, $log) {
 		return {
 			restrict: 'E',
 			templateUrl: 'tab_add.html',
-			controller: function ($scope, data, $sanitize) {
+			controller: function ($scope, data) {
 				this.saveLog = function() {
 					var obj = this;
 					$log.warn('Request server...');
