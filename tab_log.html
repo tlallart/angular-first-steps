@@ -1,0 +1,16 @@
+<div class="panel" ng-show="tab.isSet(1)" ng-init="logCtrl.loadLogs()">
+	<div class="table-responsive">
+	<table class="table">
+		<caption>Current logs</caption>
+		<thead>
+			<tr><th>Time</th><th>Name</th><th>Msg</th></tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="log in logCtrl.logs | orderBy : '-timestamp'">
+				<td>{{log.timestamp | date : 'yyyy-MM-dd HH:mm:ss'}}</td><td>{{log.username}}</td><td>{{log.msg}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</div>
+
